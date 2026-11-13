@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="so">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulga AI</title>
+<style>
+body {
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#07143d;
+  color:white;
+  text-align:center;
+}
+header {
+  padding:25px;
+  background:#075de2;
+  font-size:28px;
+  font-weight:bold;
+}
+main { padding:35px 15px; }
+h2 { color:#22d8f4; }
+p { line-height:1.6; }
+input {
+  width:85%;
+  max-width:450px;
+  padding:15px;
+  border-radius:12px;
+  border:0;
+  font-size:16px;
+}
+button {
+  padding:14px 25px;
+  margin:12px;
+  background:#1267ff;
+  color:white;
+  border:0;
+  border-radius:10px;
+  font-size:16px;
+}
+#answer {
+  background:white;
+  color:#07143d;
+  padding:18px;
+  margin:20px auto;
+  max-width:450px;
+  border-radius:12px;
+}
+</style>
+</head>
+<body>
+<header>🤖 BULGA AI</header>
+<main>
+<h2>Ku soo dhawoow Bulga AI</h2>
+<p>Kaaliyahaaga caqliga macmalka ah.<br>
+Weydii su'aal kasta!</p>
+<input id="question" placeholder="Su'aashaada halkan ku qor">
+<br>
+<button onclick="ask()">Dir su'aasha</button>
+<div id="answer">Jawaabtaadu halkan ayay ka muuqanaysaa.</div>
+</main>
+<script>
+function ask() {
+ let q=document.getElementById("question").value;
+ if(!q.trim()) return;
+ document.getElementById("answer").innerText =
+ "Waad mahadsan tahay! Bulga AI wuxuu helay su'aashaada: "+q+
+ ". Adeegga AI-ga dhabta ah weli waa lagu xirayaa.";
+}
+</script>
+</body>
+</html>
